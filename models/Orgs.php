@@ -12,3 +12,5 @@ Orgs::finder('repos', function($self, $params, $chain) {
 	$data = $chain->next($self, $params, $chain);
 	return $data;
 });
+
+?>

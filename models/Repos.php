@@ -12,3 +12,11 @@ Repos::finder('issues', function($self, $params, $chain) {
 	$data = $chain->next($self, $params, $chain);
 	return $data;
 });
+
+Repos::finder('commits', function($self, $params, $chain) {
+	$params['options']['conditions']['type'] = 'commits';
+	$data = $chain->next($self, $params, $chain);
+	return $data;
+});
+
+?>
